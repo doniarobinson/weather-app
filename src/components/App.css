@@ -8,13 +8,17 @@
   padding-bottom: 20px;
 }
 
+.error {
+  color: #C33C54;
+  text-align: left;
+}
+
 .day {
-  /*background-color: #0AD3FF;*/
   background-color: #A4C0EA;
-  /*border: 5px solid #037971;*/
+  border: 2px solid #054A91;
   padding: 8px;
 }
 
 h3 {
-
+  font-size: 1.5rem !important;
 }

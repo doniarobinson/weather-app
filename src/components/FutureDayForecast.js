@@ -1,7 +1,6 @@
 import React from 'react';
-//import { getWeatherByCity } from '../api/server';
 
-class DayForecast extends React.Component {
+class FutureDayForecast extends React.Component {
 
   render() {
     const forecast = this.props.forecast;
@@ -28,4 +27,4 @@ class DayForecast extends React.Component {
   }
 }
 
-export default DayForecast;
+export default FutureDayForecast;

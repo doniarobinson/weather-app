@@ -14,18 +14,18 @@ async function getWeatherByCity(name, country) {
     const lon = found[0].lng;
 
     try {
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&APPID=${process.env.REACT_APP_APPID}`);
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely&APPID=${process.env.REACT_APP_APPID}`);
       return response.data;
     }
     catch (error) {
-      //console.log(error);
-      //return error;
-      return "Error. Please try again.";
+      // FUTURE: distinguish these error messages
+      return "Error";
     }
 
   }
   else {
-    return "Error. Please try again.";
+    // FUTURE: distinguish these error messages
+    return "Error";
   }
 
 }
