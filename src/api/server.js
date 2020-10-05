@@ -18,13 +18,13 @@ async function getWeatherByCity(name, country) {
       return response.data;
     }
     catch (error) {
-      // FUTURE: distinguish these error messages
+      // FUTURE (not in scope): distinguish these error messages
       return "Error";
     }
 
   }
   else {
-    // FUTURE: distinguish these error messages
+    // FUTURE (not in scope: distinguish these error messages
     return "Error";
   }
 
