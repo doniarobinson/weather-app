@@ -9,8 +9,9 @@ class App extends React.Component {
     super();
     this.state = {
       city: '',
+      timezone_offset: 0,
       current: '',
-      hourly: { temp: 'hi' },
+      hourly: '',
       day0: '',
       day1: '',
       day2: '',
@@ -41,9 +42,9 @@ class App extends React.Component {
     }
     else {
       this.setState({ error: '' });
+      this.setState({ timezone_offset: response.timezone_offset });
       this.setState({ current: response.current });
       this.setState({ hourly: response.hourly });
-      console.log(this.state.hourly);
       this.setState({ day0: response.daily[0] });
       this.setState({ day1: response.daily[1] });
       this.setState({ day2: response.daily[2] });
@@ -74,7 +75,7 @@ class App extends React.Component {
           </div>
           <div className="col-md-7">
             {this.state.error ? <p className="error">{this.state.error}</p> : null}
-            {this.state.current ? <TodayForecast current={this.state.current} hourly={this.state.hourly} /> : null}
+            {this.state.current ? <TodayForecast timezone_offset={this.state.timezone_offset} current={this.state.current} hourly={this.state.hourly} /> : null}
           </div>
         </div>
 
