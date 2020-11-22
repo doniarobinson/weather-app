@@ -1,9 +1,6 @@
 const axios = require('axios');
 const cities = require('cities.json');
 
-// I would normally not push my .env file, of course, but so that testers
-// don't have to generate their own API KEY, I have
-
 async function getWeatherByCity(name, country) {
   const found = cities.filter(city =>
     city.name.toLowerCase() === name.toLowerCase()
