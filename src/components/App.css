@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #DCEDFF;
+}
+
+.get-city {
+  padding-bottom: 20px;
+}
+
+.error {
+  color: #C33C54;
+  text-align: left;
+}
+
+.day {
+  background-color: #A4C0EA;
+  border: 2px solid #054A91;
+  padding: 8px;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
