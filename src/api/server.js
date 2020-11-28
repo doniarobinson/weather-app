@@ -2,6 +2,7 @@ const axios = require('axios');
 const cities = require('cities.json');
 
 async function getWeatherByCity(name, country) {
+  // TODO: include country in search
   const found = cities.filter(city =>
     city.name.toLowerCase() === name.toLowerCase()
   );
@@ -15,13 +16,12 @@ async function getWeatherByCity(name, country) {
       return response.data;
     }
     catch (error) {
-      // FUTURE (not in scope): distinguish these error messages
+      // TODO: distinguish these error messages
       return "Error";
     }
-
   }
   else {
-    // FUTURE (not in scope: distinguish these error messages
+    // TODO: distinguish these error messages
     return "Error";
   }
 
